@@ -18,7 +18,7 @@ class _HomeScreenState extends State<HomeScreen> {
         backgroundColor: AppColors.dirtyWhite,
         body: SafeArea(
           child: Padding(
-            padding: EdgeInsets.all(Dimensions.screenWidth! * 5),
+            padding: EdgeInsets.all(Dimensions.screenHeight! * 5),
             child: Column(
               children: [ScreenTitle(title: "Home")],
             ),

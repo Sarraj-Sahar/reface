@@ -5,7 +5,7 @@ class Dimensions {
   static double? screenHeight;
 
   Dimensions(context) {
-    screenWidth = MediaQuery.of(context).size.height / 100;
-    screenHeight = MediaQuery.of(context).size.width / 100;
+    screenHeight = MediaQuery.of(context).size.height / 100;
+    screenWidth = MediaQuery.of(context).size.width / 100;
   }
 }
