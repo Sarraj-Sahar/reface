@@ -7,6 +7,9 @@ class AppColors {
   /// App white color
   static const Color dirtyWhite = Color(0xffF4F4F4);
 
+  /// App main text black color
+  static const Color mainTextBlack = Color(0xff101623);
+
   /// App secondary color
   static const Color error = Color(0xffFC698C);
 

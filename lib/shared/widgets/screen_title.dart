@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:reface/shared/shared.dart';
 
 // create a stateless widget that returns a text widget with the title passed to it
 class ScreenTitle extends StatelessWidget {
@@ -7,12 +8,14 @@ class ScreenTitle extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Dimensions(context); //initializing context
     return Center(
       child: Text(
         title,
         style: TextStyle(
-          fontSize: 24,
-          fontWeight: FontWeight.bold,
+          fontSize: Dimensions.screenHeight! * 3,
+          color: AppColors.mainTextBlack,
+          fontWeight: FontWeight.w500,
         ),
       ),
     );
