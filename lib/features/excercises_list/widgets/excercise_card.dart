@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:reface/features/excercise/screen/face_detector_view.dart';
 import 'package:reface/features/excercises_list/model/excercise_model.dart';
 import 'package:reface/shared/theme/app_sizes.dart';
 
@@ -11,7 +12,13 @@ class ExcerciseItem extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     Dimensions(context); //initializing context
     return GestureDetector(
-      onTap: () {},
+      onTap: () {
+        // move to face_detection_view.dart
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => FaceDetectorView()),
+        );
+      },
       child: Padding(
         padding: EdgeInsets.all(Dimensions.screenHeight! * 1.5),
         child: Card(
