@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:reface/shared/shared.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 // create a stateless widget that returns a text widget with the title passed to it
 class ScreenTitle extends StatelessWidget {
@@ -15,7 +16,8 @@ class ScreenTitle extends StatelessWidget {
         style: TextStyle(
           fontSize: Dimensions.screenHeight! * 3,
           color: AppColors.mainTextBlack,
-          fontWeight: FontWeight.w500,
+          fontWeight: FontWeight.bold,
+          fontFamily: GoogleFonts.poppins().fontFamily,
         ),
       ),
     );
