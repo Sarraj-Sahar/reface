@@ -10,14 +10,17 @@ class ScreenTitle extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Dimensions(context); //initializing context
-    return Center(
-      child: Text(
-        title,
-        style: TextStyle(
-          fontSize: Dimensions.screenHeight! * 3,
-          color: AppColors.mainTextBlack,
-          fontWeight: FontWeight.bold,
-          fontFamily: GoogleFonts.poppins().fontFamily,
+    return Padding(
+      padding: EdgeInsets.symmetric(vertical: Dimensions.screenHeight! * 2),
+      child: Center(
+        child: Text(
+          title,
+          style: TextStyle(
+            fontSize: Dimensions.screenHeight! * 3,
+            color: AppColors.mainTextBlack,
+            fontWeight: FontWeight.bold,
+            fontFamily: GoogleFonts.poppins().fontFamily,
+          ),
         ),
       ),
     );

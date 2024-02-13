@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:reface/features/home/widgets/home_alert_dialog.dart';
 import 'package:reface/shared/shared.dart';
 import 'package:reface/shared/widgets/screen_title.dart';
 
@@ -16,9 +17,12 @@ class _HomeScreenState extends State<HomeScreen> {
 
     return SafeArea(
       child: Padding(
-        padding: EdgeInsets.all(Dimensions.screenHeight! * 5),
+        padding: EdgeInsets.symmetric(
+            vertical: Dimensions.screenWidth! * 8,
+            horizontal: Dimensions.screenWidth! * 5),
         child: Column(
-          children: [ScreenTitle(title: "Home")],
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [ScreenTitle(title: "Home"), HomeAlertDialog()],
         ),
       ),
     );
