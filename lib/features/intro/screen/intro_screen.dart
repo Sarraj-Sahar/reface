@@ -11,6 +11,7 @@ class IntroScreen extends StatefulWidget {
 class _IntroScreenState extends State<IntroScreen> {
   @override
   Widget build(BuildContext context) {
-    return const Video(url: 'https://flutter.github.io/assets-for-api-docs/assets/videos/butterfly.mp4', title: "Introduction video");
+    return const Video(
+        url: 'assets/videos/intro.mp4', title: "Introduction video");
   }
 }
