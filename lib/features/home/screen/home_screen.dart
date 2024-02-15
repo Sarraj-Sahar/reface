@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:reface/features/home/widgets/home_alert_dialog.dart';
 import 'package:reface/features/home/widgets/home_calendar.dart';
+import 'package:reface/features/home/widgets/insights_alert_dialog.dart';
+import 'package:reface/features/home/widgets/recovery_progress.dart';
 import 'package:reface/shared/shared.dart';
 import 'package:reface/shared/widgets/screen_title.dart';
+import 'package:reface/shared/widgets/section_title.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -24,11 +27,18 @@ class _HomeScreenState extends State<HomeScreen> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Center(child: ScreenTitle(title: "Home")),
-            HomeAlertDialog(),
-            SizedBox(height: Dimensions.screenHeight! * 4),
-            ScreenTitle(title: "Calendar"),
-            HomeCalendar()
+            const Center(child: ScreenTitle(title: "Home")),
+            const HomeAlertDialog(),
+            SizedBox(height: Dimensions.screenHeight! * 2.5),
+            const SectionTitle(title: "Calendar"),
+            const HomeCalendar(),
+            SizedBox(height: Dimensions.screenHeight! * 3),
+            const SectionTitle(title: "Asymmetry Detection"),
+            const InsightsAlertDialog(),
+            SizedBox(height: Dimensions.screenHeight! * 3),
+            const SectionTitle(title: "Recovery Progress"),
+            SizedBox(height: Dimensions.screenHeight! * 2),
+            const RecoveryProgress()
           ],
         ),
       ),

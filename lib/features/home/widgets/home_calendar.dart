@@ -28,7 +28,7 @@ class _HomeCalendarState extends State<HomeCalendar> {
         CalendarFormat.week: 'Week',
       },
       calendarFormat: _calendarFormat,
-      calendarStyle: CalendarStyle(
+      calendarStyle: const CalendarStyle(
         selectedTextStyle: TextStyle(color: Colors.white),
         todayDecoration: BoxDecoration(
           color: AppColors.primary,
