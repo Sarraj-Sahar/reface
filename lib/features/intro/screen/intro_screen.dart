@@ -11,7 +11,9 @@ class IntroScreen extends StatefulWidget {
 class _IntroScreenState extends State<IntroScreen> {
   @override
   Widget build(BuildContext context) {
-    return const Video(
-        url: 'assets/videos/intro.mp4', title: "Introduction video");
+    return const Scaffold(
+      body: Video(
+        url: 'assets/videos/bp.mp4', title: "Introduction video")
+    );
   }
 }
