@@ -12,15 +12,13 @@ class ScreenTitle extends StatelessWidget {
     Dimensions(context); //initializing context
     return Padding(
       padding: EdgeInsets.symmetric(vertical: Dimensions.screenHeight! * 2),
-      child: Center(
-        child: Text(
-          title,
-          style: TextStyle(
-            fontSize: Dimensions.screenHeight! * 3,
-            color: AppColors.mainTextBlack,
-            fontWeight: FontWeight.bold,
-            fontFamily: GoogleFonts.poppins().fontFamily,
-          ),
+      child: Text(
+        title,
+        style: TextStyle(
+          fontSize: Dimensions.screenHeight! * 3,
+          color: AppColors.mainTextBlack,
+          fontWeight: FontWeight.bold,
+          fontFamily: GoogleFonts.poppins().fontFamily,
         ),
       ),
     );

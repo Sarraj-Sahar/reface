@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:reface/features/home/widgets/home_alert_dialog.dart';
+import 'package:reface/features/home/widgets/home_calendar.dart';
 import 'package:reface/shared/shared.dart';
 import 'package:reface/shared/widgets/screen_title.dart';
 
@@ -21,8 +22,14 @@ class _HomeScreenState extends State<HomeScreen> {
             vertical: Dimensions.screenWidth! * 8,
             horizontal: Dimensions.screenWidth! * 5),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: [ScreenTitle(title: "Home"), HomeAlertDialog()],
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Center(child: ScreenTitle(title: "Home")),
+            HomeAlertDialog(),
+            SizedBox(height: Dimensions.screenHeight! * 4),
+            ScreenTitle(title: "Calendar"),
+            HomeCalendar()
+          ],
         ),
       ),
     );
