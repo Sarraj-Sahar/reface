@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
+import 'package:reface/features/intro/intro.dart';
 import 'package:reface/routing/main_page.dart';
 import 'package:reface/shared/shared.dart';
 
@@ -15,7 +16,7 @@ class _SplashScreenState extends State<SplashScreen> {
     Timer(
         Duration(seconds: 3),
         () => Navigator.pushReplacement(
-            context, MaterialPageRoute(builder: (context) => MainPage())));
+            context, MaterialPageRoute(builder: (context) => IntroScreen())));
   }
 
   @override

@@ -77,9 +77,8 @@ class _VideoState extends State<Video> {
             OutlinedButton(
               onPressed: () {
                 dispose();
-                
                 //Navigate to HomeScreen 
-                //@Sahar TODO: Add the navigation to the HomeScreen
+                //TODO: Add the navigation to the HomeScreen
                 Navigator.pushReplacement(
               context, MaterialPageRoute(builder: (context) => HomeScreen()));
                 
