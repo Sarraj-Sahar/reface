@@ -21,9 +21,11 @@ class _HomeScreenState extends State<HomeScreen> {
 
     return SafeArea(
       child: Padding(
-        padding: EdgeInsets.symmetric(
-            vertical: Dimensions.screenWidth! * 8,
-            horizontal: Dimensions.screenWidth! * 5),
+        padding: EdgeInsets.only(
+            top: Dimensions.screenWidth! * 8,
+            bottom: Dimensions.screenWidth! * 2,
+            left: Dimensions.screenWidth! * 5,
+            right: Dimensions.screenWidth! * 5),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
