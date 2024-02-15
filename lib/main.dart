@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:reface/features/splash/screen/splash_screen.dart';
 
 Future<void> main() async {
   //widget binding ensures that the app is ready to run and the widgets are ready to be rendered on the screen before the app starts running
   WidgetsFlutterBinding.ensureInitialized();
-  runApp(MyApp());
+  runApp(ProviderScope(child: MyApp()));
 }
 
 class MyApp extends StatelessWidget {

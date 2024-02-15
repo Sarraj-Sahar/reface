@@ -4,6 +4,9 @@ class AppColors {
   /// App primary color
   static const Color primary = Color(0xff199A8E);
 
+  /// App secondary color
+  static const Color secondary = Color(0xffdeebea);
+
   /// App white color
   static const Color dirtyWhite = Color(0xffF4F4F4);
 
