@@ -7,7 +7,7 @@ List<ExcerciseModel> excercisesList = [
     '3-5 minutes',
     'Face mucles movement',
     '3 series ',
-    '30 repitions',
+    '30 repetitions',
     'assets/images/brow_lift.jpg',
   ),
   ExcerciseModel(
@@ -15,7 +15,7 @@ List<ExcerciseModel> excercisesList = [
     '3-5 minutes',
     'Face mucles movement',
     '3 series ',
-    '30 repitions',
+    '30 repetitions',
     'assets/images/brow_lift.jpg',
   ),
   ExcerciseModel(
@@ -23,7 +23,7 @@ List<ExcerciseModel> excercisesList = [
     '3-5 minutes',
     'Face mucles movement',
     '3 series ',
-    '30 repitions',
+    '30 repetitions',
     'assets/images/brow_lift.jpg',
   ),
   ExcerciseModel(
@@ -31,7 +31,7 @@ List<ExcerciseModel> excercisesList = [
     '3-5 minutes',
     'Face mucles movement',
     '3 series ',
-    '30 repitions',
+    '30 repetitions',
     'assets/images/brow_lift.jpg',
   ),
   ExcerciseModel(
@@ -39,7 +39,7 @@ List<ExcerciseModel> excercisesList = [
     '3-5 minutes',
     'Face mucles movement',
     '3 series ',
-    '30 repitions',
+    '30 repetitions',
     'assets/images/brow_lift.jpg',
   ),
 ];
