@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:reface/features/home/home.dart';
+import 'package:reface/routing/main_page.dart';
 import 'package:video_player/video_player.dart';
 
 class Video extends StatefulWidget {
@@ -81,7 +81,7 @@ class _VideoState extends State<Video> {
                 //Navigate to HomeScreen 
                 //TODO: Add the navigation to the HomeScreen
                 Navigator.pushReplacement(
-              context, MaterialPageRoute(builder: (context) => HomeScreen()));
+              context, MaterialPageRoute(builder: (context) => MainPage()));
                 
               },
         
