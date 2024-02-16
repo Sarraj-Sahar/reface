@@ -21,13 +21,24 @@ class FaceDetectorPainter extends CustomPainter {
 
   @override
   void paint(Canvas canvas, Size size) {
+    //TODO : add paint 3 for face framing
+
+    //  face mesh points paint
     final Paint paint1 = Paint()
       ..style = PaintingStyle.stroke
       ..strokeWidth = 1.0
       ..color = Color.fromARGB(255, 15, 246, 238);
+
+    // face landmark points paint
     final Paint paint2 = Paint()
       ..style = PaintingStyle.fill
       ..strokeWidth = 1.0
+      ..color = Color.fromARGB(255, 255, 14, 215);
+
+    // HEREEEE FINISH face frame paint
+    final Paint paint3 = Paint()
+      ..style = PaintingStyle.stroke
+      ..strokeWidth = 2.0
       ..color = Color.fromARGB(255, 255, 14, 215);
 
     for (final Face face in faces) {

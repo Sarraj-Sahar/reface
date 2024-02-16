@@ -52,41 +52,24 @@ class _DetectorViewState extends State<DetectorView> {
             body: Column(
               children: [
                 //camera view part
-                // Flexible(
-                //   child: CameraView(
-                //     customPaint: widget.customPaint,
-                //     onImage: widget.onImage,
-                //     onCameraFeedReady: widget.onCameraFeedReady,
-                //     onDetectorViewModeChanged: _onDetectorViewModeChanged,
-                //     initialCameraLensDirection:
-                //         widget.initialCameraLensDirection,
-                //     onCameraLensDirectionChanged:
-                //         widget.onCameraLensDirectionChanged,
-                //   ),
-                // ),
+                Flexible(
+                  child: CameraView(
+                    customPaint: widget.customPaint,
+                    onImage: widget.onImage,
+                    onCameraFeedReady: widget.onCameraFeedReady,
+                    onDetectorViewModeChanged: _onDetectorViewModeChanged,
+                    initialCameraLensDirection:
+                        widget.initialCameraLensDirection,
+                    onCameraLensDirectionChanged:
+                        widget.onCameraLensDirectionChanged,
+                  ),
+                ),
 
                 ////////////
                 ////////////
-                ///place holder
-                Container(
-                    height: Dimensions.screenHeight! * 75,
-                    color: Colors.white,
-                    padding: EdgeInsets.all(10),
-                    child: Text(
-                      widget.title,
-                      style: TextStyle(
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    )),
-                ////////////
-                ////////////
-
-                ExcerciseProgressView(),
-                ////////////////
+                ///place holder for when wanting to test the progress card without camera view
                 // Container(
-                //     width: Dimensions.screenWidth! * 100,
-                //     height: Dimensions.screenHeight! * 20,
+                //     height: Dimensions.screenHeight! * 75,
                 //     color: Colors.white,
                 //     padding: EdgeInsets.all(10),
                 //     child: Text(
@@ -96,6 +79,10 @@ class _DetectorViewState extends State<DetectorView> {
                 //         fontWeight: FontWeight.bold,
                 //       ),
                 //     )),
+                ////////////
+                ////////////
+
+                const ExcerciseProgressView(),
               ],
             ),
           )
