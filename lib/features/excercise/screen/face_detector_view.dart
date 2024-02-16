@@ -1,8 +1,6 @@
-// import 'package:camera/camera.dart';
 import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
 import 'package:google_mlkit_face_detection/google_mlkit_face_detection.dart';
-
 import 'detector_view.dart';
 import '../painters/face_detector_painter.dart';
 

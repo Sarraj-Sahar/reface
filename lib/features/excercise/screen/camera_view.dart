@@ -69,7 +69,8 @@ class _CameraViewState extends State<CameraView> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(body: _liveFeedBody());
+    // return Scaffold(body: _liveFeedBody());
+    return _liveFeedBody();
   }
 
   Widget _liveFeedBody() {

@@ -1,7 +1,9 @@
 import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
 import 'package:google_mlkit_commons/google_mlkit_commons.dart';
+import 'package:reface/shared/theme/app_sizes.dart';
 import 'camera_view.dart';
+import 'excercise_progress_view.dart';
 
 enum DetectorViewMode { liveFeed, gallery }
 
@@ -44,16 +46,62 @@ class _DetectorViewState extends State<DetectorView> {
 
   @override
   Widget build(BuildContext context) {
+    Dimensions(context);
     return _mode == DetectorViewMode.liveFeed
-        ? CameraView(
-            customPaint: widget.customPaint,
-            onImage: widget.onImage,
-            onCameraFeedReady: widget.onCameraFeedReady,
-            onDetectorViewModeChanged: _onDetectorViewModeChanged,
-            initialCameraLensDirection: widget.initialCameraLensDirection,
-            onCameraLensDirectionChanged: widget.onCameraLensDirectionChanged,
+        ? Scaffold(
+            body: Column(
+              children: [
+                //camera view part
+                // Flexible(
+                //   child: CameraView(
+                //     customPaint: widget.customPaint,
+                //     onImage: widget.onImage,
+                //     onCameraFeedReady: widget.onCameraFeedReady,
+                //     onDetectorViewModeChanged: _onDetectorViewModeChanged,
+                //     initialCameraLensDirection:
+                //         widget.initialCameraLensDirection,
+                //     onCameraLensDirectionChanged:
+                //         widget.onCameraLensDirectionChanged,
+                //   ),
+                // ),
+
+                ////////////
+                ////////////
+                ///place holder
+                Container(
+                    height: Dimensions.screenHeight! * 75,
+                    color: Colors.white,
+                    padding: EdgeInsets.all(10),
+                    child: Text(
+                      widget.title,
+                      style: TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    )),
+                ////////////
+                ////////////
+
+                ExcerciseProgressView(),
+                ////////////////
+                // Container(
+                //     width: Dimensions.screenWidth! * 100,
+                //     height: Dimensions.screenHeight! * 20,
+                //     color: Colors.white,
+                //     padding: EdgeInsets.all(10),
+                //     child: Text(
+                //       widget.title,
+                //       style: TextStyle(
+                //         fontSize: 20,
+                //         fontWeight: FontWeight.bold,
+                //       ),
+                //     )),
+              ],
+            ),
           )
-        : Container();
+        : Container(
+            child: Text("Camera View not working !"),
+          );
   }
 
   void _onDetectorViewModeChanged() {

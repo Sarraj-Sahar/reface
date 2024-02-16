@@ -48,6 +48,7 @@ dependencies:
   camera: ^0.10.5+9
   google_fonts: ^6.1.0
   table_calendar: ^3.1.0
+  percent_indicator: ^4.2.3
 
 dev_dependencies:
   flutter_test:

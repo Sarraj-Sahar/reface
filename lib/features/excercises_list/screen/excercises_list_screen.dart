@@ -50,7 +50,7 @@ class _ExcercisesListScreenState extends State<ExcercisesListScreen> {
                 padding: EdgeInsets.only(
                   top: Dimensions.screenHeight! * 1,
                 ),
-                width: Dimensions.screenWidth! * 80, // <-- match_parent
+                width: Dimensions.screenWidth! * 80,
                 child: ElevatedButton(
                   onPressed: () {
                     Navigator.push(
