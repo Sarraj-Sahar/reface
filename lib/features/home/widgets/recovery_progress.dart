@@ -20,7 +20,7 @@ class RecoveryProgress extends StatelessWidget {
         ),
         RecoveryProgressCard(
           title: '13',
-          description: "Days to recover",
+          description: "Days since diagnosis",
         ),
       ],
     );
