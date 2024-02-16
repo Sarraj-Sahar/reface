@@ -4,13 +4,13 @@ import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_mlkit_commons/google_mlkit_commons.dart';
-import 'package:reface/features/excercise/done_screen/done_face_detector_view.dart';
+import 'package:reface/routing/main_page.dart';
 import 'package:reface/shared/shared.dart';
-import '../widgets/instruction_dialog.dart';
-import 'package:lottie/lottie.dart';
 
-class CameraView extends StatefulWidget {
-  CameraView(
+import '../widgets/instruction_dialog.dart';
+
+class DoneCameraView extends StatefulWidget {
+  DoneCameraView(
       {Key? key,
       required this.customPaint,
       required this.onImage,
@@ -28,10 +28,10 @@ class CameraView extends StatefulWidget {
   final CameraLensDirection initialCameraLensDirection;
 
   @override
-  State<CameraView> createState() => _CameraViewState();
+  State<DoneCameraView> createState() => _CameraViewState();
 }
 
-class _CameraViewState extends State<CameraView> {
+class _CameraViewState extends State<DoneCameraView> {
   static List<CameraDescription> _cameras = [];
   CameraController? _controller;
   int _cameraIndex = -1;
@@ -82,57 +82,33 @@ class _CameraViewState extends State<CameraView> {
     if (_controller?.value.isInitialized == false) return Container();
     return ColoredBox(
       color: Colors.black,
-      child: GestureDetector(
-        // move to new screen on double tap
-        onDoubleTap: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(
-              builder: (context) => DoneFaceDetectorView(),
-            ),
-          );
-        },
-
-        child: Stack(
-          fit: StackFit.expand,
-          children: <Widget>[
-            // need the center widget to get right image proportions
-            Center(
-              child: _changingCameraLens
-                  ? Center(
-                      child: const Text('Changing camera lens'),
-                    )
-                  : CameraPreview(
-                      _controller!,
-                      child: widget.customPaint,
-                    ),
-            ),
-            _instructionDialogPosition(),
-            _instructionAnimation(),
-            _eyebrowIllustration(),
-            // _backButton(),
-            // _switchLiveCameraToggle(),
-            // _detectionViewModeToggle(),
-            _zoomControl(),
-            // _exposureControl(),
-          ],
-        ),
+      child: Stack(
+        fit: StackFit.expand,
+        children: <Widget>[
+          // need the center widget to get right image proportions
+          Center(
+            child: _changingCameraLens
+                ? Center(
+                    child: const Text('Changing camera lens'),
+                  )
+                : CameraPreview(
+                    _controller!,
+                    child: widget.customPaint,
+                  ),
+          ),
+          _successDialogPosition(),
+          _backButton(),
+          // _switchLiveCameraToggle(),
+          // _detectionViewModeToggle(),
+          _zoomControl(),
+          // _exposureControl(),
+        ],
       ),
     );
   }
 
-//instruction animation
-  Widget _instructionAnimation() => Positioned(
-        top: 230,
-        right: 50,
-        child: Lottie.asset(
-          "assets/animations/finger_up.json",
-          width: Dimensions.screenWidth! * 12,
-          fit: BoxFit.fill,
-        ),
-      );
-
 //eyebrow illustration
+
   Widget _eyebrowIllustration() => Positioned(
         //@ahmed_chelly, you can tweak the position of the eyebrow here if it's not in the right place on your screen
         top: 220,
@@ -144,10 +120,12 @@ class _CameraViewState extends State<CameraView> {
       );
 
 //instruction dialog
-  Widget _instructionDialogPosition() => Positioned(
+  Widget _successDialogPosition() => Positioned(
         top: 50,
-        right: 20,
-        child: InstructionDialog(title: 'Lift your eyebrow'),
+        right: 175,
+        child: Icon(Icons.check_circle,
+            color: AppColors.accent.withOpacity(0.8),
+            size: Dimensions.screenHeight! * 8),
       );
 
   Widget _backButton() => Positioned(
@@ -159,7 +137,12 @@ class _CameraViewState extends State<CameraView> {
           child: FloatingActionButton(
             elevation: 0,
             heroTag: Object(),
-            onPressed: () => Navigator.of(context).pop(),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => MainPage()),
+              );
+            },
             backgroundColor: Colors.transparent,
             child: Icon(
               Icons.arrow_back_ios_outlined,
@@ -235,23 +218,6 @@ class _CameraViewState extends State<CameraView> {
                     },
                   ),
                 ),
-                //zoom level
-                // Container(
-                //   width: 50,
-                //   decoration: BoxDecoration(
-                //     color: Colors.black54,
-                //     borderRadius: BorderRadius.circular(10.0),
-                //   ),
-                //   child: Padding(
-                //     padding: const EdgeInsets.all(8.0),
-                //     child: Center(
-                //       child: Text(
-                //         '${_currentZoomLevel.toStringAsFixed(1)}x',
-                //         style: TextStyle(color: Colors.white),
-                //       ),
-                //     ),
-                //   ),
-                // ),
               ],
             ),
           ),

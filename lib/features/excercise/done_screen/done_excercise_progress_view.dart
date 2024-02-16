@@ -5,14 +5,15 @@ import 'package:reface/shared/theme/app_sizes.dart';
 import 'package:percent_indicator/percent_indicator.dart';
 import '../widgets/progress_card.dart';
 
-class ExcerciseProgressView extends StatefulWidget {
-  const ExcerciseProgressView({super.key});
+class DoneExcerciseProgressView extends StatefulWidget {
+  const DoneExcerciseProgressView({super.key});
 
   @override
-  State<ExcerciseProgressView> createState() => _ExcerciseProgressViewState();
+  State<DoneExcerciseProgressView> createState() =>
+      _ExcerciseProgressViewState();
 }
 
-class _ExcerciseProgressViewState extends State<ExcerciseProgressView> {
+class _ExcerciseProgressViewState extends State<DoneExcerciseProgressView> {
   @override
   Widget build(BuildContext context) {
     Dimensions(context);
@@ -36,10 +37,10 @@ class _ExcerciseProgressViewState extends State<ExcerciseProgressView> {
                   Column(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      //@ahmed_chelly : u change values of progress of excercise screen here
+                      //@ahmed_chelly : u change values of progress of done screen here
                       ProgressCard(
                         title: "Excercises: ",
-                        value: "1/10",
+                        value: "2/10",
                       ),
                       SizedBox(
                         height: Dimensions.screenHeight! * 1,
@@ -68,8 +69,7 @@ class _ExcerciseProgressViewState extends State<ExcerciseProgressView> {
             LinearPercentIndicator(
               width: Dimensions.screenWidth! * 90,
               lineHeight: Dimensions.screenHeight! * 1.5,
-              //@ahmed_chelly : u change values of progressbar of excercise screen here
-              percent: 0.1,
+              percent: 0.2,
               barRadius: Radius.circular(10),
               backgroundColor: AppColors.extraLightGrey,
               progressColor: AppColors.primary,

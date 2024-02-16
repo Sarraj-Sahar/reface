@@ -49,6 +49,7 @@ dependencies:
   google_fonts: ^6.1.0
   table_calendar: ^3.1.0
   percent_indicator: ^4.2.3
+  lottie: ^3.0.0
 
 dev_dependencies:
   flutter_test:
@@ -76,6 +77,8 @@ flutter:
     - assets/videos/
     
     - assets/images/
+
+    - assets/animations/
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

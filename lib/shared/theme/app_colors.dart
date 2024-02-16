@@ -7,6 +7,9 @@ class AppColors {
   /// App secondary color
   static const Color secondary = Color(0xffdeebea);
 
+  /// App secondary color
+  static const Color accent = Color.fromARGB(255, 24, 255, 216);
+
   /// App white color
   static const Color dirtyWhite = Color(0xffF4F4F4);
 

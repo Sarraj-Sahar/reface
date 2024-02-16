@@ -39,14 +39,15 @@ class RepetitionCard extends StatelessWidget {
                     circularStrokeCap: CircularStrokeCap.round,
                     radius: Dimensions.screenWidth! * 8,
                     lineWidth: 5.0,
-                    percent: 0.2,
-                    center: const Text("20%"),
+                    //@ahmed_chelly : u change values of progress of excercise screen here
+                    percent: 0.1,
+                    center: const Text("10%"),
                     progressColor: AppColors.primary,
                   ),
 
                   //Value
                   const Text(
-                    "5/10",
+                    "1/10",
                     style: TextStyle(fontWeight: FontWeight.bold),
                   )
                 ],

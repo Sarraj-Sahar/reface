@@ -3,7 +3,10 @@ import 'package:reface/shared/theme/app_colors.dart';
 import 'package:reface/shared/theme/app_sizes.dart';
 
 class ProgressCard extends StatelessWidget {
-  const ProgressCard({super.key});
+  String title;
+  String value;
+
+  ProgressCard({super.key, required this.title, required this.value});
 
   @override
   Widget build(BuildContext context) {
@@ -21,9 +24,9 @@ class ProgressCard extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text("Excercises : "),
+            Text(title),
             Text(
-              "5/10",
+              value,
               style: TextStyle(fontWeight: FontWeight.bold),
             )
           ],

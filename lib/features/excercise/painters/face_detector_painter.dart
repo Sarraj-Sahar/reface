@@ -3,6 +3,7 @@ import 'dart:math';
 import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
 import 'package:google_mlkit_face_detection/google_mlkit_face_detection.dart';
+import 'package:reface/shared/shared.dart';
 
 import 'coordinates_translator.dart';
 
@@ -21,8 +22,6 @@ class FaceDetectorPainter extends CustomPainter {
 
   @override
   void paint(Canvas canvas, Size size) {
-    //TODO : add paint 3 for face framing
-
     //  face mesh points paint
     final Paint paint1 = Paint()
       ..style = PaintingStyle.stroke
@@ -39,7 +38,7 @@ class FaceDetectorPainter extends CustomPainter {
     final Paint paint3 = Paint()
       ..style = PaintingStyle.stroke
       ..strokeWidth = 2.0
-      ..color = Color.fromARGB(255, 255, 14, 215);
+      ..color = AppColors.accent;
 
     for (final Face face in faces) {
       final left = translateX(
@@ -73,7 +72,7 @@ class FaceDetectorPainter extends CustomPainter {
 
       canvas.drawRect(
         Rect.fromLTRB(left, top, right, bottom),
-        paint1,
+        paint3,
       );
 
       void paintContour(FaceContourType type) {
